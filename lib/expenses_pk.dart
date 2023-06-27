@@ -5,11 +5,11 @@ class Calculator {
   /// Returns [value] plus 1.
   int addOne(int value) => value + 1;
 
-  double currentBalance(List<Transaction> lista) => lista.fold(0.0, (previousValue, element) => previousValue + element.amount);
+  double currentBalance(List<Tr> lista) => lista.fold(0.0, (previousValue, element) => previousValue + element.amount);
 }
 
 
-class Transaction {
+class Tr {
   String id;
   String title;
   double amount;
@@ -17,7 +17,7 @@ class Transaction {
   String? location;
   String? imageUrl;
 
-    Transaction({
+    Tr({
     required this.id,
     required this.title,
     required this.amount,
